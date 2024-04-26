@@ -86,7 +86,7 @@
           mostrarCamara();
       }
 
-      function mostrarCamara() {
+      async function mostrarCamara() {
 
           var opciones = {
               audio: false,
@@ -95,7 +95,7 @@
               }
           };
 
-          if(navigator.mediaDevices.getUserMedia) {
+          if(await navigator.mediaDevices.getUserMedia) {
               navigator.mediaDevices.getUserMedia(opciones)
                   .then(function(stream) {
                       currentStream = stream;
