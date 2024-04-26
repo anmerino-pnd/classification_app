@@ -110,7 +110,7 @@
               }
           };
 
-          if(await navigator.mediaDevices.getUserMedia) {
+          if(navigator.mediaDevices.getUserMedia) {
               navigator.mediaDevices.getUserMedia(opciones)
                   .then(function(stream) {
                       currentStream = stream;
